@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Carpet</title>
+	<script>
+		function calculate(){
+			"use strict"; // Error message?
+			// variable declarations
+			var distance = document.getElementById("distance").value;
+			var width = document.getElementById("width").value;
+			var Length = document.getElementById("Length").value;
+			var area = Length*width;
+			var price = area * 6;
+			// Error array
+			var error = ["Invaild Input", "Price is negative, Please check inputs." ];
+			
+			// Errors
+			if (Length < 0){
+				document.getElementById("errLength").innerHTML = error[0];
+			}
+			if (width < 0){
+				document.getElementById("errWidth").innerHTML = error[0];
+			}
+			if (distance < 0 ){
+				document.getElementById("errDistance").innerHTML = error[0];
+			}
+			if (price < 0){
+				document.getElementById("total").innerHTML = error[1];
+
+			}
+			
+			// Calculate price per square foot
+			if (area >= 0){
+				if (area >= 300){
+					price -= price *(1/10);
+				}
+
+				// Calculate delivary price
+				if (distance > 0){
+					price += 2.5 * distance;
+				}
+				document.getElementById("total").innerHTML = price;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<p>Enter the length and width</p>
+	<p>Length:<span id="errLength"></span></p><input type = "text" id="Length" name="Len" />
+
+	<aside><p>Width:<span id="errWidth"></span></p><input type = "text" name="wid" id="width" /></aside>
+	<p>Enter the distance for delivery in miles <span id="errDistance"></span></p>
+	<input type = "text" name = "dist" id="distance" />
+	<aside><button onclick = "calculate()" type="button" id="calculate">Calculate</button></aside>
+		<p>The total price is: <span id="total"></span></p>
+	
+</body>
+</html>

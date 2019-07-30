@@ -1,0 +1,167 @@
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+ <title>My Store</title>
+  <!-- Include bootstrap CSS -->
+ <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<style type="text/css">
+ #labels, #cart-labels { font: 18px bold;  background-color: #696969; color: #fff; }
+ #cart { width: 40%;}
+</style>
+
+</head>
+<body>
+<div class='container'>
+ <h2>Sam's Store</h2>
+ <table class="table">
+  <tr id='labels'>
+	<td class='col-xs-3' colspan='2' >Stock ID</td>
+    <td class='col-xs-5' >Product</td>
+    <td class='col-xs-2' >Regular Price</td>
+    <td class='col-xs-2'>Sale Price</td>
+  </tr>
+
+  <tr class='list' id='c1'>
+    <td class='col-xs-1'><button type='button' value='0' id='cb-0' data-index='0' class='add-item' />Add</button></td>
+    <td class='col-xs-2' id='sid-1'>SH32AQ60</td>
+    <td class='col-xs-5' id='pid-1'>Sharp AQUAS-60in  HDTV</td>
+    <td class='col-xs-2' id='rp-1'>799.99</td>
+    <td class='col-xs-2' id='sp-1'>759.99</td>
+  </tr>
+  <tr class='list' id='c28'>
+    <td class='col-xs-1'><button type='button' value='1' id='cb-1' data-index='1' class='add-item' />Add</button></td>
+	<td class='col-xs-2' id='sid-2'>PN455</td>
+    <td class='col-xs-5' id='pid-2'>Panasonic 55in LED HDTV</td>
+    <td class='col-xs-2' id='rp-2'>999.99</td>
+    <td class='col-xs-2' id='sp-2'>679.99</td>
+  </tr>
+  <tr class='list' id='c60'>
+    <td class='col-xs-1'><button type='button' value='2' id='cb-2' data-index='2' class='add-item' />Add</button></td>
+    <td class='col-xs-2' id='sid-3'>VZ49M</td>
+    <td class='col-xs-5' id='pid-3'>VIZIO M series 49in LED HDTV</td>
+    <td class='col-xs-2' id='rp-3'>719.99</td>
+    <td class='col-xs-2' id='sp-3'>579.99</td>
+  </tr>
+  <tr class='list' id='c62'>
+    <td class='col-xs-1'><button type='button' value='3' id='cb-3' data-index='3' class='add-item' />Add</button></td>
+    <td class='col-xs-2' id='sid-4'>IN200SR</td>
+    <td class='col-xs-5' id='pid-4'>Insignia 200W Stereo Receiver</td>
+    <td class='col-xs-2' id='rp-4'>24.99</td>
+    <td class='col-xs-2' id='sp-'>19.99</td>
+  </tr>
+
+  <tr class='list' id='c6'>
+    <td class='col-xs-1'><button type='button' value='4' id='cb-4' data-index='4' class='add-item' />Add</button></td>
+    <td class='col-xs-2' id='sid-5'>PN1000HTS</td>
+    <td class='col-xs-5' id='pid-5'>Panasonic 1000W Smart Blu-ray Home Theater System</td>
+    <td class='col-xs-2' id='rp-5'>349.99</td>
+    <td class='col-xs-2' id='sp-5'>299.99</td>
+  </tr>
+  <tr class='list' id='c7'>
+    <td class='col-xs-1'><button type='button' value='5' id='cb-5' data-index='5' class='add-item' />Add</button></td>
+    <td class='col-xs-2' id='sid-6'>HP305DJ</td>
+    <td class='col-xs-5' id='pid-6'>HP Deskjet 3056A</td>
+    <td class='col-xs-2' id='rp-6'>49.90</td>
+    <td class='col-xs-2' id='sp-6'>34.90</td>
+  </tr>
+  <tr class='list' id='c8'>
+    <td class='col-xs-1'><button type='button' value='6' id='cb-6' data-index='6' class='add-item' />Add</button></td>
+      <td class='col-xs-2' id='sid-7'>RF386BMR</td>
+      <td class='col-xs-5' id='pid-7'>Rocketfish Bluetooth Music Receiver</td>
+      <td class='col-xs-2' id='rp-7'>49.90</td>
+      <td class='col-xs-2' id='sp-7'>34.90</td>
+  </tr>
+  <tr class='list' id='c9'>
+    <td class='col-xs-1'><button type='button' value='7' id='cb-7' data-index='7' class='add-item' />Add</button></td>
+        <td class='col-xs-2' id='sid-8'>SM350SB</td>
+        <td class='col-xs-5' id='pid-8'>Sling Media Slingbox 350</td>
+        <td class='col-xs-2' id='rp-8'>179.90</td>
+        <td class='col-xs-2' id='sp-8'>115.90</td>
+  </tr>
+  <tr class='list' id='c9'>
+    <td class='col-xs-1'><button type='button' value='8' id='cb-8' data-index='8' class='add-item' />Add</button></td>
+        <td class='col-xs-2' id='sid-9'>SMSM1SB</td>
+        <td class='col-xs-5' id='pid-8'>Sling Media Slingbox SM1</td>
+        <td class='col-xs-2' id='rp-8'>264.90</td>
+        <td class='col-xs-2' id='sp-8'>249.50</td>
+  </tr>
+  <tr class='list' id='c10'>
+    <td class='col-xs-1'><button type='button' value='9' id='cb-9' data-index='9' class='add-item' />Add</button></td>
+        <td class='col-xs-2' id='sid-10'>SM500SB</td>
+        <td class='col-xs-5' id='pid-9'>Sling Media Slingbox 500</td>
+        <td class='col-xs-2' id='rp-9'>189.90</td>
+        <td class='col-xs-2' id='sp-9'>169.50</td>
+  </tr>
+  
+
+
+ </table>
+
+ <div id="cart">
+  <div class='list-title'>You have <span id="items">0</span>  items in your Shopping Cart</div>
+  <div id="list"></div>
+  <table class='table' >
+	<thead id='cart-labels'>
+      <td class='col-xs-9'>Product</td>
+      <td class='col-xs-3'>Sale Price</td>
+	</thead>
+	<tbody id='item-list'>
+	</tbody>
+  </table>
+ </div>
+ <div class="total">Total Amount: $<span id="total">0.00</span></div>
+ <div class="total">15% discount: $<span id="discount">0.00</span></div>
+ <div class="total">Final Amount: $<span id="amount">0.00</span></div>
+ <div id='d1'></div>
+ 
+</div> 
+<script> 
+  function Product(id, type, cost, in_stock)
+  { 
+	this.id = id; this.type = type; this.cost = cost; this.inStock = in_stock; 
+  } 
+
+  var product_list = []; 
+	product_list.push(new Product('SH32AQ60', 'Sharp AQUAS-60in HDTV',799.99, 10)); 
+	product_list.push(new Product('PN455', 'Panasonic 55in LED HDTV', 999.99, 15)); 
+	product_list.push(new Product('VZ49M', 'VIZIO M series 49in LED HDTV', 719.99, 12)); 
+	product_list.push(new Product('IN200SR', 'Insignia 200W Stereo Receiver', 24.99, 13)); 
+	product_list.push(new Product('PN1000HTS', 'Panasonic 1000W Smart Blu-ray Home Theater System', 349.99, 10)); 
+	product_list.push(new Product('HP305DJ', 'HP Deskjet 3056A', 49.90, 30)); 
+	product_list.push(new Product('RF386BMR', 'Rocketfish Bluetooth Music Receiver', 49.90, 1)); 
+	product_list.push(new Product('SM350SB', 'Sling Media Slingbox 350', 179.90, 5)); 
+	product_list.push(new Product('SMSM1SB', 'Sling Media Slingbox SM1', 274.90, 4)); 
+	product_list.push(new Product('SM500SB', 'Sling Media Slingbox 500', 189.90, 3)); 
+	var items = 0;
+	
+	$('.add-item').on('click', function(){
+		var thisButton = $(this);
+		
+		items += 1;
+		$('#items').text(items);
+		var productIndex = thisButton.data('index');
+		var productAdd = product_list[productIndex];
+		
+		var productID = productAdd.id;
+		var productName = productAdd.type;
+		var price = productAdd.cost;
+		var productStock = productAdd.inStock;
+		
+		var newRow = "<tr><td>" + productName + " " + price + "</td></tr>";
+		
+		$('#list').append(newRow);
+		var total = parseFloat($('#total').text());
+		var finaltotal =total + price;
+		$('#total').text(finaltotal);
+		var discount = finaltotal * .15;
+		$('#discount').text(discount);
+		$('#amount').text(finaltotal-discount);
+		var newProductStock = productStock-1;
+
+	});			  
+</script> 
+</body> 
+</html></pre>
+</body>
+</html>
